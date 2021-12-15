@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables!</title>
+    <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+    <script>
+        // var variables are function scoped
+        var first = 'jonno'; // variable declaration statement
+
+        // let and const are block scoped
+        let age = 300;
+        const cool = true;
+        console.log(first); // function call statement
+
+        // var and let can be updated.
+        // const cannot be updated.
+        // when updating var or let, you don't need to redeclare the variable,
+        // and is considered bad practice if you do redeclare it.
+        first = 'jonathan';
+        cool = false // this will produce an error as we cannot update const
+
+        // naming conventions
+        // camel case
+        const iLovePizza = true;
+
+        // upper camel case - almost never used
+        const ILoveToEatHotDogs = true;
+
+        // snake case
+        const this_is_snake_case = 'nice!';
+
+        // kebab case - dashes in variable names is NOT valid JavaScript, do not use
+        const this-is-kebab-case = false;
+    </script>
+</body>
+</html>
