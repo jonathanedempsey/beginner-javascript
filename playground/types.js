@@ -19,3 +19,12 @@ pizza`;
 const hello = "hello my name is " + name + ". Nice to meet you"; // concatenation - okay
 const hello2 = `hello my name is ${name}. Nice to meet you.`; // interpolation - much better
 const age = `I am ${1 + 100} years old`; // can also run statements, not just variables
+
+// Backticks are also useful for html injection
+const html = `
+    <div>
+        <h2>${name}</h2>
+        <p>${hello2}</p>
+    </div>
+`;
+document.body.innerHTML = html;
