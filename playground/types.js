@@ -78,3 +78,20 @@ const dadGets = smarties % kids; // 2
 
 // NaN (Not a Number) is also a true number and it occurs when you perform an invalid calculation between types.
 // Eg. 10 / 'dog' = NaN
+
+
+/**
+ * Types - Objects
+ */
+// Objects are used to create collections of data and put them into groups.
+// Instead of doing this, which isn't the best since the data isn't associated with each other...
+const first = 'jonno';
+const age = 100;
+
+// We can group them together into an object using "property: value".
+const person = {
+    first: 'jonno',
+    age: 100
+}
+
+// To access the values we can use person.first and person.age
