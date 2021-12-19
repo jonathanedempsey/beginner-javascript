@@ -95,3 +95,32 @@ const person = {
 }
 
 // To access the values we can use person.first and person.age
+
+
+/**
+ * Types - null and undefined
+ */
+// Undefined occurs when trying to access a variable which has been created but not set
+let dog;
+console.log(dog) // undefined
+
+// null is something that has a value of nothing.
+let somethingUndefined; // undefined
+const somethingNull = null; // null
+
+// For example, Cher's first name is Cher but she doesn't have a last name
+const cher = {
+    first: 'Cher'
+}
+// So cher.last is undefined as her last name was never set.
+
+// On the other hand, Teller from Penn and Teller has legally changed his birth name from Raymond Teller to just Teller.
+// So his name was...
+const teller = {
+    first: 'Raymond',
+    last: 'Teller'
+}
+
+// and then later updated it to:
+teller.first = 'Teller';
+teller.last = null; // He explicitly set is last name to nothing
