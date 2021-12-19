@@ -28,3 +28,53 @@ const html = `
     </div>
 `;
 document.body.innerHTML = html;
+
+
+/**
+ * Type - number
+ */
+const age = 100;
+const name = 'jonno';
+// in console, typing in "typeof age" or "typeof name" will return what the type of the variables is
+
+// both integers and floats are of type number
+const integer = 100; // integer is a full number
+const float = 100.5; // float has a decimal
+
+// numbers can be used for mathematics, duh
+const a = 10;
+const b = 20;
+// a + b = 30
+// a * b = 200
+// a / b = 0.5
+// a - b = -10
+
+// Mixing mathematic symbols act a bit funny when mixing types
+// 1 + "1" = "11" - the plus sign concatenated the number and string into a string
+// "10" * "10" = 100 - multiplying two strings will carry out the equation and convert the results into type of number
+
+// Math functions
+const smarties = 20;
+const kids = 3;
+const eachKidGets = smarties / kids;
+console.log(`Each kid gets ${eachKidGets}`); // Each kid gets 6.6666666667
+
+// The above result is too messy, we can use Math.floor() to round down to the nearest whole number
+const eachKidGets = Math.floor(smarties / kids);
+console.log(`Each kid gets ${eachKidGets}`); // Each kid gets 6
+
+// We can also use modulo to get how many smarties are left over after dividing them between the kids
+const dadGets = smarties % kids; // 2
+
+
+// Funny floating bits
+0.1 + 0.2 = 0.30000000000000004 // whoops, what's going on here?!
+// Very good explaination here - https://0.30000000000000004.com/
+
+// JavaScript also has Infinity and negative Infinity!
+// Your computer can only calculate up to a certain number. If you try compute a number that is too high, you're result will be Infinity
+// Example 1000 ** 200 = Infinity
+// Also if you do "typeof Infinity" or "typeof -Infinity" the result will be a number. So they are both true numbers in JavaScript
+
+// NaN (Not a Number) is also a true number and it occurs when you perform an invalid calculation between types.
+// Eg. 10 / 'dog' = NaN
