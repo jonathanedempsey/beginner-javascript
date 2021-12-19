@@ -124,3 +124,33 @@ const teller = {
 // and then later updated it to:
 teller.first = 'Teller';
 teller.last = null; // He explicitly set is last name to nothing
+
+
+/**
+ * Types = Boolean
+ */
+// true or false statements, like an on and off switch
+
+// We have a variable to detect when the user's mouse is clicked down.
+// When not clicked is false and we can change it to true when the user is clicked down
+let isDrawing = false;
+
+// It can also return the boolean of calculations
+const age = 18;
+const ofAge = age > 19;
+console.log(ofAge); // false
+
+// Equal signs
+// One equal sign is to set or update a variable
+age = 18;
+age = 50;
+
+// double equals - almost always considered bad practice.
+// double equals only check that the values are the same, not type type
+// 10 == 10 is true
+// "10" == 10 is true
+
+// triple equals - almost always to be used over double equals.
+// triple equals will check that the value on the left and right are the same, AND also the type is the same
+// 10 === 10 is true
+// "10" === 10 is false
