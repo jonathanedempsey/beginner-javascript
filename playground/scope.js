@@ -46,3 +46,22 @@ function isCool(name) {
     console.log(cool);
     return cool;
 }
+
+// Example - which dog name gets logged?
+// Answer - doug, but why?
+
+// The way scope lookup happens starts where the functions are defined, not where they're run.
+const dog = 'doug';
+
+// Even though logDog is run inside of go(), since it's defined here it will pick up the global dog,
+// rather than the dog defined in go()
+function logDog() {
+    console.log(dog)
+}
+
+function go() {
+    const dog = 'sunny';
+    logDog();
+}
+
+go();
