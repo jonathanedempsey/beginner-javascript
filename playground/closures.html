@@ -34,6 +34,29 @@
          * variables without any errors.
          */
         innerFn();
+
+
+        /**
+         * Why is the code below helpful?
+         * Why did we do this in two separate functions?
+         * Because you can create functions that are based off whichever greeting you like.
+         *
+         * Since our inner scope references a variable that was created in our outer scope, that is what is referred to as closure.
+         * We still are able to access our outer variables inside of the outer function scope, inside of our inner even after the createGreeting() function has been closed over. That is the whole idea behind closures, it's been closed.
+         * That is the first example where you have functions inside of functions and they are able to access the closure data inside of that.
+         */
+        function createGreeting(greeting = '') {
+            const myGreet = greeting.toUpperCase();
+            return function(name) {
+                return `${myGreet} ${name}`;
+            }
+        }
+
+        const sayHello = createGreeting('hello');
+        const sayHey = createGreeting('hey');
+        console.log(sayHello('jonno'));
+        console.log(sayHello('bob'));
+        console.log(sayHey('jimmy'));
     </script>
 </body>
 </html>
