@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+    <link rel="stylesheet" href="../base.css">
+</head>
+<body>
+    <script>
+        /**
+         * A closure is the ability to access a parent-level scope from a child scope even
+         * after the parent function has been terminated.
+         * So in JavaScript, we are able to create functions within functions and
+         * even when the outer function is done running, we can still maintain the outerVar in
+         * memory to access it at a later time from innerFn().
+         */
+        function outer() {
+            const outerVar = 'I am the outer Var';
+
+            function inner() {
+                const innerVar = 'I am the inner Var';
+                console.log(innerVar);
+                console.log(outerVar);
+            }
+            return inner;
+        }
+
+        const innerFn = outer();
+
+        /**
+         * Due to how closures work, this will still console log both
+         * variables without any errors.
+         */
+        innerFn();
+    </script>
+</body>
+</html>
